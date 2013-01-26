@@ -28,7 +28,9 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt": "~0.3.17"
+    "grunt": "~0.3.17",
+    "buster": ">=0.6.2",
+    "grunt-buster": "~0.1.2"
   },
   "keywords": []
 }
