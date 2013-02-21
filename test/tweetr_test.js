@@ -12,9 +12,5 @@ buster.testCase('awesome', {
         assert.same(tweetr.awesome(), 'awesome', 'should be awesome.');
         done();
     }
-    'this test fails': function(done) {
-        assert.same(true, false);
-        done();
-    }
 
 });
