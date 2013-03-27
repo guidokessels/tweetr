@@ -1,7 +1,5 @@
 # tweetr
 
-- [ ] bla
-
 Quick project to test a workflow with GruntJS, BusterJS, TravisCI and GitHub
 
 ## Getting Started
