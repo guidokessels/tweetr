@@ -22,15 +22,20 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
-    test: {
-      files: ['test/**/*.js']
-    },
     lint: {
       files: ['grunt.js', 'lib/**/*.js', 'test/**/*.js']
     },
     watch: {
       files: '<config:lint.files>',
       tasks: 'lint test'
+    },
+    buster: {
+      test: {
+        config: 'buster.js'
+      },
+      server: {
+        port: 1111
+      }
     },
     jshint: {
       options: {
@@ -55,5 +60,11 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', 'lint test concat min');
+
+  // Reroute 'test' to 'buster' task.
+  grunt.registerTask('test', 'buster');
+
+  // Load grunt-buster plugin so we can use Buster via 'grunt buster'
+  grunt.loadNpmTasks('grunt-buster');
 
 };
